@@ -34,10 +34,6 @@ console.log('Average', average);
 
 
 
-
-
-
-
 //QUESTION 2
 console.log(" Question 2. Create an array called names that contains the following values: 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'");
 
@@ -49,7 +45,7 @@ let totalChars = 0;
 
 for (let i =0; i<names.length; i++) {
     totalChars += names[i].length
-    console.log("Index :",i, "Name:", name[i], "totalChar:" , totalChars);
+    console.log("Index :",i, "Name:", names[i], "totalChar:" , totalChars);
 }
 let averageName = totalChars / names.length;
 console.log("Average of Names : ", averageName);
@@ -104,7 +100,7 @@ for (let i = 0 ; i < nameLengths.length; i++){
 console.log(" Question 7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times.");
 
 function concatWords (word , n ) {
-        console.log("Word Par:" , word , "n Par:", n);
+      
         let concat = word.repeat(n);
         console.log(concat);
 }
@@ -168,9 +164,10 @@ let numbers3 = [100,100,100];
 let numbers4 = [100,100,99];
 
 function twoAverages(array1, array2){
-    console.log("Parameters:", array1,array2);
+
     let total1 = 0;
     let total2 = 0;
+    
     for( const number of array1) {
         total1 += number;
         console.log("Current number loop 1 : ", number, "Total1 : ", total1);
@@ -213,3 +210,13 @@ willBuyDrink( true,11);
 //QUESTION 13
 console.log(" Question  13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.");
 
+// This function will check if a person should buy a meal based on the level of their hunger and budget.
+
+function shouldGoToMovie(isRaining , budget) {
+    // this below will check if it is not raining and there is enough money for the movie ticket.
+    let goToMovie = !isRaining && budget >= 13;
+    console.log("Go to the movie?", goToMovie);
+    return goToMovie;
+}
+
+shouldGoToMovie(false,5);
